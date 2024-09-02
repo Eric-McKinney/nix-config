@@ -3,7 +3,7 @@
     disk = {
       my-disk = {
         device = "";
-        type = "";
+        type = "disk";
         content = {
           type = "gpt";
           partitions = {
