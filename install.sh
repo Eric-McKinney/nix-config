@@ -36,7 +36,7 @@ sudo nixos-install
 
 for i in {15..0}
 do
-  echo -ne "\r Rebooting in ${i} seconds "
+  echo -ne "\rRebooting in ${i} seconds "
   sleep 1
 done
 
