@@ -2,7 +2,7 @@
 
 set -e  # exit immediately upon any command failure
 
-curl -sSL https://raw.githubusercontent.com/eric-mckinney/nix-config/main/disko.nix -o ~/disko.nix
+curl -sSL https://raw.githubusercontent.com/eric-mckinney/nixos-config/main/disko.nix -o ~/disko.nix
 
 disks=$(lsblk -o PATH,TYPE | grep disk | cut -d " " -f 1)
 lsblk ${disks}
