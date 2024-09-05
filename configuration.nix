@@ -5,10 +5,9 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
+  imports = [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-    ];
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -68,8 +67,17 @@
     EDITOR = "vim";
   };
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  programs.hyprland.enable = true;
+
   environment.systemPackages = with pkgs; [
     vim
+  ];
+
+  fonts.packages = with pkgs; [
+    jetbrains-mono
+    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
