@@ -58,7 +58,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.eric = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       firefox
     ];
@@ -69,7 +69,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    jetbrains-mono
     vim
   ];
 
