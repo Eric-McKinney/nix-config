@@ -59,7 +59,6 @@
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
-      firefox
     ];
   };
 
@@ -72,7 +71,45 @@
   programs.hyprland.enable = true;
 
   environment.systemPackages = with pkgs; [
+    asciiquarium-transparent
+    bat
+    cbonsai
+    cmatrix
+    discord
+    fd
+    ffmpegthumbnailer-unstable
+    firefox
+    flameshot
+    foot
+    fzf
+    gcc
+    git
+    glow
+    imagemagick
+    ipfetch-unstable
+    jq
+    kitty
+    libsixel
+    man-db
+    man-pages
+    neofetch-unstable
+    onefetch
+    p7zip
+    poppler-glib
+    ripgrep
+    rustc-wrapper
+    spotify
+    spotify-player
+    texinfo
+    thefuck
+    tldr
     vim
+    vlc
+    waybar
+    wl-clipboard
+    wofi
+    yazi
+    zoxide
   ];
 
   fonts.packages = with pkgs; [
